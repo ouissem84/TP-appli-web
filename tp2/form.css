@@ -1,0 +1,34 @@
+body{
+    font-family: 'Comic sans ms'
+  }
+  
+  form{
+    text-align : center;
+  }
+  
+  label{
+      width: 100px;
+      display: inline-block;
+  }
+  
+  #error, #resultat{
+    border : 1px solid red;
+    padding : 15px;
+    display : none;
+  }
+  
+  #error{
+    background-color : pink;
+  }
+  
+  #resultat{
+    border : 1px solid blue;
+    background-color : green;
+  }
+  
+  
+  .display{
+    display : block !important;
+  }
+  
+  
