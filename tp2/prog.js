@@ -1,15 +1,6 @@
 function validation(){
-  
-    var city = document.getElementById("city").value;
-    
-    if(city.length < 5){
-      // afficher une erreur
-      
-    }
-    
-    // ou faire une validation de tous les champs en une seule fois
-    document.getElementById("error").innerHTML = "";
-    
+  document.getElementById("error").innerHTML = "";
+
   for(let item of document.querySelectorAll('.inputAW')){
     if(item.value.length < 5){
       // recuperation du label
@@ -19,16 +10,16 @@ function validation(){
       
       // ajout de la classe CSS "display"
       document.getElementById("error").classList.add("display");
-        document.getElementById("resultat").classList.remove("display")
+      document.getElementById("resultat").classList.remove("display");
   
     }
       
   }
     if(document.getElementById("error").innerHTML == ""){
-      var city = document.getElementById("city").value
-      document.getElementById("resultat").innerHTML = `Bienvenue à ${city}`;
-      document.getElementById("error").classList.remove("display")
-    document.getElementById("resultat").classList.add("display")
+      var nom = document.getElementById("nom").value;
+      document.getElementById("resultat").innerHTML = `Bienvenue ${nom}`;
+      document.getElementById("error").classList.remove("display");
+      document.getElementById("resultat").classList.add("display");
     }
      
   

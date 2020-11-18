@@ -1,34 +1,53 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>TP1</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <head>
+       <title>tp3</title>
+       <meta charset='utf-8'>
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <link rel="stylesheet" href="indexavant.css">
+       <script src="tp2/prog.js"></script>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <!-- Place favicon.ico in the root directory -->
+    </head>
+    <body>
+        <div class="container" >
+            <h1 id=formulair>Formulaires tp3</h1>
+            <form id="formAW" class="form" onsubmit="validation()">
+              <fieldset >
+                <legend  class=legend1 style="font-weight: bold" >Saisie fiche "Personne"</legend>
+                
+                <div class="form-group" >
+                  <label for="nom" id="a">Nom</label>
+                  <input type="text" class="form-control" id="nom" placeholder="ex:OUAMRI" maxlength=20 size="30" class="inputAW"><br><br>
+                </div>
 
-    <style>
-      body {
-        background-color: #e9ebee;
-        font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-        font-size: 16px;
-        max-width: 800px;
-      }
-    </style>
+                <div class="form-group">
+                  <label for="prenom" id="a">Prénom</label>
+                  <input type="text" class="form-control" id="prenom" placeholder="ex:ouissem" maxlength=20 size="30" class="inputAW"><br><br>
+                </div>
 
-    <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-    <!--<link rel="stylesheet" href="style.css">-->
-    <!--<script src="main.js"></script>-->
-  </head>
-  <body>
-    <h1>TP 1</h1>
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-    <img src="../galilee.png" alt="Logo Galilee" />
+                <div class="form-group">
+                  <label for="adresse">Adresse</label>
+                  <input type="text" class="form-control" id="adresse" placeholder="ex:11 rue " maxlength=50 size="30" class="inputAW"><br><br>
+                </div>
+                <div class="form-group">
+                  <label for="date">Date de naissance</label>
+                  <input type="date" class="form-control" id="date" placeholder="ex:ouissem" maxlength=20 size="30"class="inputAW"><br><br>
+                </div>
 
-    <h2><a href="experiences/index.html">Expériences</a></h2>
-  </body>
+                <div class="form-group">
+                  <label for="email">Mail</label>
+                  <input type="email" class="form-control" id="email" placeholder="pierre.giraud@edhec.com" maxlength=20 size="30"class="inputAW"><br><br>
+                </div>
+                
+                <div class="form-group">
+                  <input type="button" style="height:40px;" value="Valider" onclick="validation()"/><br><br>
+                </div>
+              </fieldset>
+            </form>
+        </div>
+        <div id="error"> </div> 
+        <div id="resultat"></div>
+   </body>
 </html>
+

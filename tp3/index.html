@@ -9,25 +9,93 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
+        <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
 
+        <!-- CSS boostrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <script src="js/popper.min.js"></script>
+
+        <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/form-jquery-validation.js"></script>
+        
         <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
+          body{  
+            background-color: #f0c6ea;           
+            font-family: "comic sans ms",system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+            font-size: 17px;
+            margin: 0 auto;
+            max-width: 500px;  
           }
+         .modal-body img{
+           max-width: 100%;
+         }
+         .link {
+           text-decoration: none;
+           color: #f0c6ea;
+         }
         </style>
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="main.js"></script>-->
     </head>
-    <body>        
-        <h1>tp3</h1>
+    <body>   
+        <h1>tp3 formulaire version2</h1><br><br>
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+          <legend  class=legend1 style="font-weight: bold" >Saisie fiche "Personne"</legend>
+          <form>
+            <div class="form-group">
+              <label for="nom">Nom</label>
+              <input type="text" class="form-control" id="nom" placeholder="ex:ouamri">
+              <small id="nom" class="form-text text-muted"> La saisie de votre nom est obligatoire.</small>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" class="form-control" id="prenom" aria-describedby="emailHelp" placeholder="ex:ouissem">
+                <small id="prenom" class="form-text text-muted">La saisie de votre prenom est obligatoire.</small>
+              </div>
+           <div class="form-group">
+            <label for="adresse">Adresse</label>
+            <input type="text" class="form-control" id="adresse" aria-describedby="emailHelp" placeholder="ex:11 rue paris">
+            <small id="adresse" class="form-text text-muted">La saisie de votre adresse est obligatoire.</small>
+            </div>
+            <div class="form-group">
+            <label for="date">Date de naissance</label>
+            <input type="date" class="form-control" id="date" aria-describedby="emailHelp" >
+            <small id="date" class="form-text text-muted">La saisie de votre date de naissance est obligatoire.</small>
+            </div>
+            <div class="form-group">
+            <label for="email">Mail</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="ex:aa@mail.fr" >
+            <small id="emailHelp" class="form-text text-muted">La saisie de votre mail est obligatoire.</small>
+            </div>
+            <button type="button" class="btn btn-outline-danger"id="button">Valider</button>
+            
+            <br><br>
+            <!-- Button trigger modal -->
+          </form>
+          <div class="modal" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Sauvegarder </button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
     </body>
 </html>
