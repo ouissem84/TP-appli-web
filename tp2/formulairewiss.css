@@ -1,8 +1,12 @@
+label{
+  width: 150px;
+  display: inline-block;
+}
 body{             
     font-family: "comic sans ms",system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
     font-size: 17px;
     margin: 0 auto;
-    max-width: 900px;              
+    max-width:500px ;              
 }
 #fiche {
     text-align:center;
@@ -27,7 +31,7 @@ table{
   .right {
     text-align: left;
   }
-  .vld{
+  #vld{
     
     padding : 8px 16px;
     font-size: 16px;
@@ -42,10 +46,7 @@ table{
     position : relative;
     border: 2px solid;
    
-
-
 }
-
 
 #resultat {
     width: 100%;
@@ -54,7 +55,4 @@ table{
     color: white;
     position : relative;
     
-}
-label{
-  display: inline-block;
 }

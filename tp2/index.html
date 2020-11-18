@@ -1,62 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>TP2 Formulaire </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+        
+        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
+        <link rel="stylesheet" href="./Formulairewiss.css" />
+        <script src="./Prog.js"></script>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>tp2 formulaire</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-  <!-- Place favicon.ico in the root directory -->
-  <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-  <link rel="stylesheet" href="formulairewiss.css">
-  <script src="prog.js"></script>
-
-</head>
-
-<body background="fond.jpg" width="500" height="500">
-
-  <br><br>
+    </head>
+    
+    <body background="fond.jpg" width="500" height="500"></body>>     
+           <br><br>
   <h1 id="fiche">Saisie d'une fiche "Personne"</h1><br><br>
-  <form id="formAW" class="form" onsubmit="validation()">
-    <table>
-      <tr>
-        <td class="right"><label style="font-weight: bold">Nom:</label></td>
-        <td><input type="text" style="height:35px;" id="Nom" name="Nom" placeholder="ex: ouamri" maxlength=20 size="30"
-            class="inputAW"><br><br /></td>
-      </tr>
-      <tr>
-        <td class="right"><label style="font-weight: bold">Prénom:</label></td>
-        <td><input type="text" style="height:35px;" id="prenom" name="prenom" placeholder="ex: ouissem" maxlength=20
-            size="30" class="inputAW"><br><br /></td>
-      </tr>
-      <tr>
-        <td class="right"><label style="font-weight: bold">Adresse:</label></td>
-        <td><input type="texte" style="height:35px;" id="adresse" name="adresse" placeholder="ex:paris" maxlength=50
-            size="30" class="inputAW"><br><br /></td>
-      </tr>
-      <tr>
-        <td class="right"><label style="font-weight: bold">Date de naissance:</label></td>
-        <td><input type="date" style="height:35px;" id="date" name="date" placeholder="JJ/MM/AAAA"
-            class="inputAW"><br><br /></td>
-      </tr>
-      <tr>
-        <td class="right"><label style="font-weight: bold">Mail:</label></td>
-        <td><input type="mail" style="height:35px;" id="mail" name="mail" placeholder="ex:aa@mail.fr" maxlength=30
-            size="30" class="inputAW"><br><br /></td>
-      </tr>
-    </table>
+        
+        <fieldset >
+      
+            <form id="formAW" class="form" onsubmit="validation()">
+               <label for="nom"> Nom  </label>
+               <input type="text" id="nom" name="nom" placeholder="ex: Ouamri" minlength=5 maxlength=20 size="25" style="height:30px;" class="inputAW" >
+               <br><br>
+                <label for="prenom"> Prénom  </label>
+                <input type="prenom" id="prenom" name="prenom" placeholder="ex: Ouissem" minlength=5 maxlength=20 size="25" style="height:30px;" class="inputAW" >
+                <br><br>
+                <label for="date"> Date de naissance  </label>
+                <input type="date" id="date" name="date" placeholder="JJ/MM/AAAA" style="height:30px;" class="inputAW" >
+                <br><br>
+                <label for="adresse"> Adresse </label>
+                <input type="adresse" id="adresse" name="adresse" placeholder="ex: 11 Rue pantin " minlength=5 maxlength=50 size="25" style="height:30px;" class="inputAW" >
+                <br><br>
+                <label for="mail"> Mail </label>
+                <input type="mail" id="mail" name="mail" placeholder="ex: aa@mail.com" minlength=5 maxlength=60 size="25"style="height:30px;"  class="inputAW" ><br><br>
+              <p>
+                <input type="button" id="vld" value="Valider" onclick="validation()"/>
+              </p>
+              <br>
+              
+            </form>
+            
+            <!-- msg d'erreur -->
+            <div id="error"></div>
+            <!-- msg de validation -->
+            <div id="resultat"></div>
 
-    <div class="vld">
-      <input type="button" style="height:40px;" value="Valider" onclick="validation()"><br><br>
-    </div>
-  </form>
-  <br>
-  <div id="error"> </div>
-  <div id="resultat"></div>
-
-</body>
-
+         </fieldset>   
+       
+    </body>
 </html>
