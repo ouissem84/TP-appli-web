@@ -14,7 +14,7 @@ function validation(){
   
     }
       
-  }
+  
     if(document.getElementById("error").innerHTML == ""){
       var nom = document.getElementById("nom").value;
       document.getElementById("resultat").innerHTML = `Bienvenue ${nom}`;
