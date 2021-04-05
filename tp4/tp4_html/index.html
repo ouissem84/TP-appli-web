@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>TP4Contacts </title>
+    <title>Contacts</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,29 +16,12 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/form-jquery-validation.js"></script>
-    <script src="./store.js"></script>
-    <script src="./gps.js"></script>
 
 </head>
-<!--<script>
-    function KeyPress()
-    {
-        total = document.getElementById("name").value.length;
-        total = document.getElementById("firstname").value.length;
-        document.getElementById("compteur").innerHTML = total+" Car."; 
-        document.getElementById("compteur1").innerHTML = total1+" Car."; 
-    }
-    function KeyPress1()
-    {
-         
-        document.getElementById("compteur1").innerHTML = total+" Car."; 
-    }
-
-    </script>-->
 
 <body>
     <div class="container">
-        <h4>Ajouter un contact TP4</h4>
+        <h4>Ajouter un contact</h4>
         <!-- Add your site or application content here -->
 
         <form>
@@ -47,9 +30,9 @@
                     <label for="name">Nom</label>
                 </div>
                 <div class="form-group col">
-                    <input type="text" class="form-control" placeholder="Votre nom" id="name" onkeydown="KeyPress();">
+                    <input type="text" class="form-control" placeholder="" id="name">
                 </div>
-                <div class="form-group col-1" id="compteur">
+                <div class="form-group col-1">
                     0 car.
                 </div>
             </div>
@@ -58,9 +41,9 @@
                     <label for="firstname">Prénom</label>
                 </div>
                 <div class="form-group col">
-                    <input type="text" class="form-control" placeholder="Votre prénom" id="firstname"onkeydown="KeyPress1();">
+                    <input type="text" class="form-control" placeholder="" id="firstname">
                 </div>
-                <div class="form-group col-1" id="compteur1">
+                <div class="form-group col-1">
                     0 car.
                 </div>
             </div>
@@ -69,7 +52,7 @@
                     <label for="birth">Date de naissance</label>
                 </div>
                 <div class="form-group col">
-                    <input type="date" class="form-control" placeholder="Votre date de naissance" id="birth">
+                    <input type="date" class="form-control" placeholder="" id="birth">
                 </div>
                 <div class="form-group col-1">
                 </div>
@@ -79,11 +62,11 @@
                     <label for="adresse">Adresse</label>
                 </div>
                 <div class="form-group col">
-                    <input type="text" class="form-control" placeholder="votre adresse" id="adresse">
+                    <input type="text" class="form-control" placeholder="" id="adresse">
                     <div id="map">
                         <!--  image Google Map à mettre à jour -->                            
                         <img alt="map" width="300" src="https://maps.googleapis.com/maps/api/staticmap?markers=latitude,longitude&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg">
-                    </div> 
+                    </div>
                 </div>
                 <div class="form-group col-1">
                     <button class="btn btn-warning" type="button" id="gps">📍 GPS</button>
@@ -103,7 +86,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col">
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                    <button type="button" class="btn btn-primary">Ajouter</button>
                 </div>
             </div>
         </form>
@@ -150,12 +133,14 @@
         </table>
 
 
+
+
         <div class="modal" tabindex="-1" role="dialog" id="myModal">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Modal title</h5>
-                        <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -163,8 +148,8 @@
                         <p>Modal body text goes here.</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Save changes</button>
-                        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
